@@ -1,0 +1,13 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">开始录音</view>
+        <view class="page__desc">"请长按语音按钮对着话筒说话"</view>
+    </view>
+    <view class="page__bd page__bd_spacing">
+        <view class="button-sp-area">
+            <button class="weui-btn" type="primary" plain="true" bindtouchstart="touchdown" bindtouchend="touchup">长按说话</button>
+            <button class="weui-btn" type="warn" plain="true" bindtap="tapPlay">播放</button>
+            <button class="weui-btn" type="default" plain="true" bindtap="tapStyleCool">样式库</button>
+        </view>
+    </view>
+</view>
