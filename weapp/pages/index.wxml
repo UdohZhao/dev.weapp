@@ -1,13 +1,212 @@
 <view class="page">
+  <view class="main">
+    <!-- 背景 -->
+      <view class="animation-wrapper" >
+        <view class="sticky-wrapper">
+          <image src='../dist/images/cunji.jpg' ></image>
+        </view>
+        <view class="sticky-wrapper">
+          <image src='../dist/images/cunji.jpg' ></image>
+        </view>
+      </view>
+      <!-- 文字 -->
+      <view class="section-content flurr">
+        <view class="page__hd" animation="{{animationData}}">
+            <view class="page__title">存己科技</view>
+            <view class="page__desc">"永远不要停止探索"</view>
+        </view> 
+        <view class="page__bd page__bd_spacing">
+          <view class="button-sp-area">
+          <button class="weui-btn" type="primary" plain="true" bindtouchstart="touchdown" bindtouchend="touchup">长按说话</button>
+            <button class="weui-btn" type="warn" plain="true" bindtap="tapPlay">播放</button> 
+            <button class="weui-btn" type="default" plain="true" bindtap="tapStyleCool">样式库                 </button>
+          </view>
+        </view>
+      </view>
+  </view>
+
+
+  <!-- 第二页 -->
+<scroll-view scroll-y="{{scrollY}}" style="height:{{height}}px" bindscroll="bindscroll" scroll-with-animation="true" upper-threshold="10" lower-threshold="10">
+    <!-- 文字层 -->
+    <view style="height:{{height}}px;opacity:{{num}}" class="section-content ">
+      <!-- 文字层的文本 -->
+      <view class="section_body">
+        <view class="page__hd">
+              <view class="page__title">我们能做什么？</view>
+        </view> 
+        <view class="page__bd page__bd_spacing lineHeight">
+              网站开发是制作一些专业性强的网站，比如说动态PHP网页。而且网站开发一般是
+              原创，网站制作可以用别人的模板。网站开发字面意思比制作有更深层次的进步，
+              它不仅仅是网站美工和内容，它可能涉及到域名注册查询、网站的一些功能的开发
+              网站开发是制作一些专业性强的网站，比如说动态PHP网页。而且网站开发一般是
+              原创，网站制作可以用别人的模板。网站开发字面意思比制作有更深层次的进步，
+              它不仅仅是网站美工和内容，它可能涉及到域名注册查询、网站的一些功能的开发。
+        </view> 
+      </view>
+      <!-- 文字层中的背景图片 -->
+      <view class="section_img" >
+        <image style='height:{{height}}px;width:{{width}}px' src='../dist/images/back.jpg'></image>
+      </view>
+    </view>
+    <!-- 背景动画 -->
+    <view>
+      <image src='../dist/images/cunji.jpg' style="width:{{width}}px;"></image>
+    </view>
+    
+</scroll-view>
+
+<!-- 第三页 -->
+<view class="main">
+  <!--上半部分文字内容  -->
+  <view class="section-content">
     <view class="page__hd">
-        <view class="page__title">开始录音</view>
-        <view class="page__desc">"请长按语音按钮对着话筒说话"</view>
+      <view class="page__title">心灵感知</view>
+      <view class="section-content ">
+          <view class="page__bd page__bd_spacing">
+              <view class="weui-form-preview__value">“要自由的人，其实要承担最大的责任，选别人少走的路的人，背负最沉重的枷锁。从来就没有不需要抵抗重力的飞翔。”</view>
+              <view class="author">-- 存己001号</view>  
+          </view>
+      </view>
+    </view>
+    <!-- 滚动的文字和需要覆盖的图片内容 -->
+    <scroll-view  scroll-y="true" style='height:270px;' scroll-with-animation="true" bindscrolltoupper="scrollUpper" bindscrolltolower="scrollLower">
+      <view class="scrollText" style='min-height:260px;'>
+        <view class="page__bd page__bd_spacing">
+              <view class="weui-form-preview__value">“第一等智慧的人都是自相矛盾的，两个原则没有任何一个是对的，只有在具体的时间和地点，做出的唯一正好的判断，才是对的。中庸，是恰到好处”</view>
+              <view class="author">-- 存己003号</view>  
+        </view>
+        <view class="page__bd page__bd_spacing">
+              <view class="weui-form-preview__value">“ 每个人的心中都有一匹欲望的野马。你可以去放养它，也可以去圈养它驯养它。但是不要假装它不存在，排斥它。我们每个人都应该自由的，骄傲的活出个生机勃勃的生命。”</view>
+              <view class="author">-- 存己004号</view>  
+        </view>
+      </view>
+       <view class="scrollImg" style='min-height:260px;'>
+        <image src='../dist/images/logo.png'></image>
+      </view> 
+    </scroll-view>
+    <!-- 文字层滚动后的图片 -->
+    <view class="scrollback">
+      <image src='../dist/images/back.jpg'></image>
+    </view>
+    <view class="section_caption" style='opacity:{{opacity}};' animation="{{animationData2}}">
+      <view class="section_caption_title">粒子模式？小意思。</view>
+      <view class="section_caption_bd">翻滚的烟雾，倾盆的大雨，还有风中起伏的麦田。
+      有了最多 18 个核心和超线程技术，iMac Pro 让你能轻松构建和渲染各种静态或
+      动态的 2D 或 3D 粒子系统。</view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 
+--
+--  复制区域
+--
+ -->
+  <!-- 第二页 -->
+<scroll-view scroll-y="{{scrollY}}" style="height:{{height}}px" bindscroll="bindscroll" scroll-with-animation="true" upper-threshold="10" lower-threshold="10">
+    <!-- 文字层 -->
+    <view style="height:{{height}}px;opacity:{{num}}" class="section-content ">
+      <!-- 文字层的文本 -->
+      <view class="section_body">
+        <view class="page__hd">
+              <view class="page__title">我们能做什么？</view>
+        </view> 
+        <view class="page__bd page__bd_spacing lineHeight">
+              网站开发是制作一些专业性强的网站，比如说动态PHP网页。而且网站开发一般是
+              原创，网站制作可以用别人的模板。网站开发字面意思比制作有更深层次的进步，
+              它不仅仅是网站美工和内容，它可能涉及到域名注册查询、网站的一些功能的开发
+              网站开发是制作一些专业性强的网站，比如说动态PHP网页。而且网站开发一般是
+              原创，网站制作可以用别人的模板。网站开发字面意思比制作有更深层次的进步，
+              它不仅仅是网站美工和内容，它可能涉及到域名注册查询、网站的一些功能的开发。
+        </view> 
+      </view>
+      <!-- 文字层中的背景图片 -->
+      <view class="section_img" >
+        <image style='height:{{height}}px;width:{{width}}px' src='../dist/images/back.jpg'></image>
+      </view>
+    </view>
+    <!-- 背景动画 -->
+    <view>
+      <image src='../dist/images/cunji.jpg' style="width:{{width}}px;"></image>
+    </view>
+    
+</scroll-view>
+
+<!-- 第三页 -->
+<view class="main">
+  <!--上半部分文字内容  -->
+  <view class="section-content">
+    <view class="page__hd">
+      <view class="page__title">心灵感知</view>
+      <view class="section-content ">
+          <view class="page__bd page__bd_spacing">
+              <view class="weui-form-preview__value">“要自由的人，其实要承担最大的责任，选别人少走的路的人，背负最沉重的枷锁。从来就没有不需要抵抗重力的飞翔。”</view>
+              <view class="author">-- 存己001号</view>  
+          </view>
+      </view>
+    </view>
+    <!-- 滚动的文字和需要覆盖的图片内容 -->
+    <scroll-view  scroll-y="true" style='height:270px;' scroll-with-animation="true" bindscrolltoupper="scrollUpper" bindscrolltolower="scrollLower">
+      <view class="scrollText" style='min-height:260px;'>
+        <view class="page__bd page__bd_spacing">
+              <view class="weui-form-preview__value">“第一等智慧的人都是自相矛盾的，两个原则没有任何一个是对的，只有在具体的时间和地点，做出的唯一正好的判断，才是对的。中庸，是恰到好处”</view>
+              <view class="author">-- 存己003号</view>  
+        </view>
+        <view class="page__bd page__bd_spacing">
+              <view class="weui-form-preview__value">“ 每个人的心中都有一匹欲望的野马。你可以去放养它，也可以去圈养它驯养它。但是不要假装它不存在，排斥它。我们每个人都应该自由的，骄傲的活出个生机勃勃的生命。”</view>
+              <view class="author">-- 存己004号</view>  
+        </view>
+      </view>
+      <view class="scrollImg" style='min-height:260px;'>
+        <image src='../dist/images/logo.png'></image>
+      </view>
+    </scroll-view>
+    <view class="scrollback">
+      <image src='../dist/images/back.jpg'></image>
+    </view>
+    <view class="section_caption" style='opacity:{{opacity}};' animation="{{animationData2}}">
+      <view class="section_caption_title">粒子模式？小意思。</view>
+      <view class="section_caption_bd">翻滚的烟雾，倾盆的大雨，还有风中起伏的麦田。
+      有了最多 18 个核心和超线程技术，iMac Pro 让你能轻松构建和渲染各种静态或
+      动态的 2D 或 3D 粒子系统。</view>
+    </view>
+  </view>
+</view>
+
+
+
+<!-- 第四页  -->
+
+<view class="page__hd">
+        <view class="page__title">Progress</view>
+        <view class="page__desc">进度条，这里采用小程序原生的progress</view>
     </view>
     <view class="page__bd page__bd_spacing">
-        <view class="button-sp-area">
-            <button class="weui-btn" type="primary" plain="true" bindtouchstart="touchdown" bindtouchend="touchup">长按说话</button>
-            <button class="weui-btn" type="warn" plain="true" bindtap="tapPlay">播放</button>
-            <button class="weui-btn" type="default" plain="true" bindtap="tapStyleCool">样式库</button>
+        <view class="weui-progress">
+            <view class="weui-progress__bar">
+                <progress percent="100" stroke-width="20" active='true'/>
+            </view>
         </view>
+        <view class="weui-progress__desc">服务客户 <text>50+</text></view>
+        <view class="weui-progress">
+            <view class="weui-progress__bar">
+                <progress percent="100" stroke-width="20" active='true'/>
+            </view>
+        </view>
+        <view class="weui-progress__desc">完成项目 <text>50+</text></view>
+        <view class="weui-progress">
+            <view class="weui-progress__bar">
+                <progress percent="100" stroke-width="20" active='true'/>
+            </view>
+        </view>
+        <view class="weui-progress__desc">开发时间 <text>26280H+</text></view>
+        <view class="weui-progress">
+            <view class="weui-progress__bar">
+                <progress percent="100" stroke-width="20" active='true'/>
+            </view>
+        </view>
+        <view class="weui-progress__desc">成立时间 <text>8760H+</text></view>
     </view>
 </view>
