@@ -1,20 +1,5 @@
 // pages/index.js
 
-function _next() {
-  var that = this;
-  if (this.data.progress >= 100) {
-    this.setData({
-      disabled: false
-    });
-    return true;
-  }
-  this.setData({
-    progress: ++this.data.progress
-  });
-  setTimeout(function () {
-    _next.call(that);
-  }, 20);
-}
 Page({
 
   /**
@@ -28,20 +13,13 @@ Page({
     opacity:'',
     animationData2:{},
     scrollY:true,
-    progress: 0,
-    disabled: false
+    zIndex:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if (this.data.disabled) return;
-    this.setData({
-      progress: 0,
-      disabled: true
-    });
-    _next.call(this);
   
   },
 
@@ -324,6 +302,14 @@ Page({
     }
   },
 
+// 第三页 滚动动画
+  // bindscrollTwo:function(event){
+  //   console.log(event.detail)
+  //   it(event.detail.scrollTop == 100){
+  //     //滚动到顶部时,
+
+  //   }
+  // }
   
 
 })

@@ -66,6 +66,23 @@ button[type="default"][plain] {
   padding-right: 10px;
 }
 
+/* 第三页样式修改  开始  */
+.section-content_two{
+  min-height: 1000px;
+}
+.scrollImg{
+  margin-top: 100px;
+  width: 100%;
+  text-align: center;
+  background-color: #000;
+}
+.scrollImg .scrollImg_transform{
+  transform: translate(-100px,0,0);
+}
+.transition{
+  transition: opacity 1s ease-out;
+}
+/* 第三页样式修改  结束  */
 
 /* 文字层中的 背景图片 */
 .section_body{
@@ -80,11 +97,7 @@ button[type="default"][plain] {
   width: 100%;
   z-index: 1;
 }
-.scrollImg{
-  width: 100%;
-  text-align: center;
-  background-color: #000;
-}
+
 .scrollText{
   padding:15px 0;
   z-index: 2;

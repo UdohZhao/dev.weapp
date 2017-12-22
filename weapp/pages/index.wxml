@@ -56,21 +56,31 @@
     
 </scroll-view>
 
+
+
 <!-- 第三页 -->
 <view class="main">
-  <!--上半部分文字内容  -->
-  <view class="section-content">
+ 
+  <view class="section-content section-content_two">
+    <!--上半部分固定文字内容  -->
     <view class="page__hd">
       <view class="page__title">心灵感知</view>
       <view class="section-content ">
           <view class="page__bd page__bd_spacing">
-              <view class="weui-form-preview__value">“要自由的人，其实要承担最大的责任，选别人少走的路的人，背负最沉重的枷锁。从来就没有不需要抵抗重力的飞翔。”</view>
+              <view class="weui-form-preview__value">“要自由的人，其实要承担最大的责任，选别人少走的路的人，背负最沉重的枷锁。从来就没有不需要抵抗重力的飞翔。要自由的人，其实要承担最大的责任，选别人少走的路的人，背负最沉重的枷锁。从来就没有不需要抵抗重力的飞翔”</view>
               <view class="author">-- 存己001号</view>  
           </view>
       </view>
     </view>
+
+
     <!-- 滚动的文字和需要覆盖的图片内容 -->
-    <scroll-view  scroll-y="true" style='height:270px;' scroll-with-animation="true" bindscrolltoupper="scrollUpper" bindscrolltolower="scrollLower">
+    <scroll-view  scroll-y="true" style='height:600px;' scroll-with-animation="true" bindscrolltoupper="scrollUpper" bindscrolltolower="scrollLower" bindscroll="bindscrollTwo">
+      <!-- 滚动文字中的，图片 -->
+      <view class="scrollImg" style='min-height:260px;'>
+        <image src='../dist/images/logo.png' class="scrollImg_transform"></image>
+      </view> 
+      <!-- 文字内容 -->
       <view class="scrollText" style='min-height:260px;'>
         <view class="page__bd page__bd_spacing">
               <view class="weui-form-preview__value">“第一等智慧的人都是自相矛盾的，两个原则没有任何一个是对的，只有在具体的时间和地点，做出的唯一正好的判断，才是对的。中庸，是恰到好处”</view>
@@ -81,14 +91,17 @@
               <view class="author">-- 存己004号</view>  
         </view>
       </view>
-       <view class="scrollImg" style='min-height:260px;'>
-        <image src='../dist/images/logo.png'></image>
-      </view> 
+      
+
     </scroll-view>
+
+
+
     <!-- 文字层滚动后的图片 -->
     <view class="scrollback">
       <image src='../dist/images/back.jpg'></image>
     </view>
+    <!-- 滚动之后出现在底部的内容 -->
     <view class="section_caption" style='opacity:{{opacity}};' animation="{{animationData2}}">
       <view class="section_caption_title">粒子模式？小意思。</view>
       <view class="section_caption_bd">翻滚的烟雾，倾盆的大雨，还有风中起伏的麦田。
@@ -99,11 +112,16 @@
 </view>
 
 
+
+
+
 <!-- 
 --
 --  复制区域
 --
  -->
+
+
   <!-- 第二页 -->
 <scroll-view scroll-y="{{scrollY}}" style="height:{{height}}px" bindscroll="bindscroll" scroll-with-animation="true" upper-threshold="10" lower-threshold="10">
     <!-- 文字层 -->
