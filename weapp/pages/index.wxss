@@ -2,18 +2,9 @@
  .page{
   background-color: #000;
 } 
-.button-sp-area{
-    margin: 0 auto;
-    padding-top: 15px;
-    width: 60%;
+.page__title{
+  font-size: 40px;
 }
-.mini-btn{
-    margin-right: 5px;
-}
-.weui-btn{
-  margin: 63px 0;
-}
-
 .main{
   position: relative;
   min-height: 504px;
@@ -42,18 +33,23 @@
 .page__hd{
   color:#fff;
 }
+.page__title,.page__desc{
+  text-align: center;
+}
 .page__bd{
   padding-bottom: 20px;
+  
 }
-button[type="default"][plain] {
-  color: #fff;
-  border: 1px solid #fff;
+.section_body{
+  margin-top: -60px;
+}
+.page__bd_title{
+  font-size: 25px;
+  padding: 15px 10px;
+  text-align: center;
 }
 .main .page__hd {
   margin-bottom: 20px;
-}
-.page__bd_title{
-  font-size: 16px;
 }
 .page__bd_desc{
   font-size: 11px;
@@ -68,20 +64,21 @@ button[type="default"][plain] {
 
 /* 第三页样式修改  开始  */
 .section-content_two{
-  min-height: 1000px;
+  min-height: 600px;
 }
 .scrollImg{
-  margin-top: 100px;
+  margin-top: 80px;
   width: 100%;
   text-align: center;
   background-color: #000;
 }
-.scrollImg .scrollImg_transform{
-  transform: translate(-100px,0,0);
+.scrollImg_pos{
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: -1;
 }
-.transition{
-  transition: opacity 1s ease-out;
-}
+
 /* 第三页样式修改  结束  */
 
 /* 文字层中的 背景图片 */
@@ -101,11 +98,12 @@ button[type="default"][plain] {
 .scrollText{
   padding:15px 0;
   z-index: 2;
+  background-color: #000;
 }
 .scrollback{
   position: absolute;
   z-index: -10;
-  bottom: 113px;
+  bottom: 123px;
   right: 0;
   width: 100%;
 }
