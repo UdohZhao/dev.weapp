@@ -10,12 +10,13 @@
       <view class="section-content flurr" style='height:{{height}}px' >
         <view animation="{{animationData}}">
           <view class="page__hd" >
-              <view class="page__title">存己科技</view>
+              <view class="page__title">重庆存己科技<text>.</text></view>
           </view> 
           <view class="page__bd page__bd_spacing">
             <view class="button-sp-area">
               <view class="page__title">Never Stop Exploring.</view>
-              <view class="page__title">永远不要停止探索.</view>
+              <view class="page__title">永 远 不 要</view>
+              <view class="page__title">停 止 探 索</view>
             </view>
           </view>
         </view>
@@ -24,18 +25,36 @@
 
     <!-- 第二页 -->
 <view class="main">
-  <scroll-view scroll-y="true" style="height:{{height}}px" bindscroll="bindscroll" scroll-with-animation="true" >
+  <scroll-view scroll-y="true" style="height:{{height}}px" bindscroll="bindscroll" scroll-with-animation="true" upper-threshold="10" lower-threshold="10" enable-back-to-top="true">
     <!-- 文字层 -->
     <view style="height:{{height}}px;opacity:{{num}}" class="section-content sec_content_bd">
       <!-- 文字层的文本 -->
-      <view class="section_body" animation="{{animationData}}">
+      <view class="section_body section_body_img" animation="{{animationData}}">
         <view class="page__title">我们能做什么？</view>
-        <view class="page__bd_title">网站建设</view>
-        <view class="page__bd_title">微信公众号</view> 
-        <view class="page__bd_title">微信小程序</view> 
-        <view class="page__bd_title">H5页面</view> 
-        <view class="page__bd_title">APP/webAPP</view> 
-        <view class="page__bd_title">产品/UI设计</view>         
+        <view class="page__bd_title">
+         <image src='../dist/images/icon_1.png'></image>
+         网站建设
+        </view>
+        <view class="page__bd_title">
+          <image src='../dist/images/icon_2.png'></image>
+          微信公众号
+        </view> 
+        <view class="page__bd_title">
+          <image src='../dist/images/icon_3.png'></image>
+          微信小程序
+        </view> 
+        <view class="page__bd_title">
+          <image src='../dist/images/icon_4.png'></image>
+          H5页面
+        </view> 
+        <view class="page__bd_title">
+          <image src='../dist/images/icon_5.png'></image>
+          APP/webAPP
+        </view> 
+        <view class="page__bd_title">
+          <image src='../dist/images/icon_6.png'></image>
+          产品/UI设计
+        </view>         
       </view>
       <!-- 文字层中的背景图片 -->
       <view class="section_img" >
@@ -54,9 +73,10 @@
   <view class="section-content section-content_two">
     <!--上半部分固定文字内容  -->
     <view class="page__hd">
+
       <view class="page__title">最近项目</view>
       <view class="section-content ">
-          <view class="page__bd page__bd_spacing">
+          <view class="page__bd">
               <view class="page__bd_title">Smile and silence are two powerful
                tools. Smile is the way to solve many problems and silence is the way to
                 avoid many problems.</view>
@@ -95,6 +115,7 @@
               <view class="page__bd_title">“第一等智慧的人都是自相矛盾的，两个原
               则没有任何一个是对的，只有在具体的时间和地点，做出的唯一正好的判断，才是对的。
               中庸，是恰到好处”</view>
+
         </view>
       </view>
     </scroll-view>
@@ -119,7 +140,7 @@
     </scroll-view>
     <!-- 滚动之后出现在底部的内容 -->
     <view class="section_caption" style='opacity:{{opacity}};' animation="{{animationData2}}">
-      <view class="page__title">温州隆亨乳胶制品</view>
+      <view class="page__title">心成国际​装饰</view>
     </view>
   </view>
 </view>
