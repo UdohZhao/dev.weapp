@@ -23,14 +23,13 @@
   </view>
 
     <!-- 第二页 -->
-<scroll-view scroll-y="{{scrollY}}" style="height:{{height}}px" bindscroll="bindscroll" scroll-with-animation="true" upper-threshold="10" lower-threshold="10">
+<view class="main">
+  <scroll-view scroll-y="true" style="height:{{height}}px" bindscroll="bindscroll" scroll-with-animation="true" >
     <!-- 文字层 -->
-    <view style="height:{{height}}px;opacity:{{num}}" class="section-content ">
+    <view style="height:{{height}}px;opacity:{{num}}" class="section-content sec_content_bd">
       <!-- 文字层的文本 -->
       <view class="section_body" animation="{{animationData}}">
-        <view class="page__hd">
-              <view class="page__title">我们能做什么？</view>
-        </view> 
+        <view class="page__title">我们能做什么？</view>
         <view class="page__bd_title">网站建设</view>
         <view class="page__bd_title">微信公众号</view> 
         <view class="page__bd_title">微信小程序</view> 
@@ -49,11 +48,9 @@
     </view>
     
 </scroll-view>
-
-
+</view>
 <!-- 第三页 -->
 <view class="main">
- 
   <view class="section-content section-content_two">
     <!--上半部分固定文字内容  -->
     <view class="page__hd">
@@ -67,29 +64,23 @@
       </view>
     </view>
     <!-- 滚动的文字和需要覆盖的图片内容 -->
-    <scroll-view  scroll-y="true" style='height:320px;' scroll-with-animation="true" bindscrolltoupper="scrollUpper" bindscrolltolower="scrollLower" bindscroll="bindscrollTwo">
+    <scroll-view  scroll-y="true" style='height:320px;' scroll-with-animation="true"    bindscrolltoupper="scrollUpper" bindscrolltolower="scrollLower" bindscroll="bindscrollTwo">
       <!-- 滚动文字中的，图片 -->
       <view class="scrollImg {{viewStyle}}" style='min-height:300px;'>
         <image src='../dist/images/cunji-work-1.png' class="scrollImg_transform"></image>
       </view> 
       <!-- 文字内容 -->
       <view class="scrollText" style='min-height:320px;'>
-        <view class="page__bd page__bd_spacing">
-              <view class="weui-form-preview__value">“第一等智慧的人都是自相矛盾的，两个原则没有任何一个是对的，只有在具体的时间和地点，做出的唯一正好的判断，才是对的。中庸，是恰到好处”</view>
-              <view class="author">坤宏睿博BIM</view>  
-        </view>
-        <view class="page__bd page__bd_spacing">
-              <view class="weui-form-preview__value">“ 每个人的心中都有一匹欲望的野马。你可以去放养它，也可以去圈养它驯养它。但是不要假装它不存在，排斥它。我们每个人都应该自由的，骄傲的活出个生机勃勃的生命。”</view>
-              <view class="author">-- 存己004号</view>  
+        <view class="page__bd">
+              <view class="page__bd_title">“ 每个人的心中都有一匹欲望的野马。你可
+              以去放养它，也可以去圈养它驯养它。但是不要假装它不存在，排斥它。我们每个人都应该
+              自由的，骄傲的活出个生机勃勃的生命。”</view>
         </view>
       </view>
     </scroll-view>
     <!-- 滚动之后出现在底部的内容 -->
     <view class="section_caption" style='opacity:{{opacity}};' animation="{{animationData2}}">
-      <view class="section_caption_title">坤宏睿博BIM</view>
-      <view class="section_caption_bd">翻滚的烟雾，倾盆的大雨，还有风中起伏的麦田。
-      有了最多 18 个核心和超线程技术，iMac Pro 让你能轻松构建和渲染各种静态或
-      动态的 2D 或 3D 粒子系统。</view>
+      <view class="page__title">坤宏睿博BIM</view>
     </view>
 
     <!-- 滚动的文字和需要覆盖的图片内容 -->
@@ -101,21 +92,15 @@
       <!-- 文字内容 -->
       <view class="scrollText" style='min-height:320px;'>
         <view class="page__bd page__bd_spacing">
-              <view class="weui-form-preview__value">“第一等智慧的人都是自相矛盾的，两个原则没有任何一个是对的，只有在具体的时间和地点，做出的唯一正好的判断，才是对的。中庸，是恰到好处”</view>
-              <view class="author">坤宏睿博BIM</view>  
-        </view>
-        <view class="page__bd page__bd_spacing">
-              <view class="weui-form-preview__value">“ 每个人的心中都有一匹欲望的野马。你可以去放养它，也可以去圈养它驯养它。但是不要假装它不存在，排斥它。我们每个人都应该自由的，骄傲的活出个生机勃勃的生命。”</view>
-              <view class="author">-- 存己004号</view>  
+              <view class="page__bd_title">“第一等智慧的人都是自相矛盾的，两个原
+              则没有任何一个是对的，只有在具体的时间和地点，做出的唯一正好的判断，才是对的。
+              中庸，是恰到好处”</view>
         </view>
       </view>
     </scroll-view>
     <!-- 滚动之后出现在底部的内容 -->
     <view class="section_caption" style='opacity:{{opacity}};' animation="{{animationData2}}">
-      <view class="section_caption_title">坤宏睿博BIM</view>
-      <view class="section_caption_bd">翻滚的烟雾，倾盆的大雨，还有风中起伏的麦田。
-      有了最多 18 个核心和超线程技术，iMac Pro 让你能轻松构建和渲染各种静态或
-      动态的 2D 或 3D 粒子系统。</view>
+      <view class="page__title">温州隆亨乳胶制品</view>
     </view>
 
     <!-- 滚动的文字和需要覆盖的图片内容 -->
@@ -127,41 +112,20 @@
       <!-- 文字内容 -->
       <view class="scrollText" style='min-height:320px;'>
         <view class="page__bd page__bd_spacing">
-              <view class="weui-form-preview__value">“第一等智慧的人都是自相矛盾的，两个原则没有任何一个是对的，只有在具体的时间和地点，做出的唯一正好的判断，才是对的。中庸，是恰到好处”</view>
-              <view class="author">坤宏睿博BIM</view>  
-        </view>
-        <view class="page__bd page__bd_spacing">
-              <view class="weui-form-preview__value">“ 每个人的心中都有一匹欲望的野马。你可以去放养它，也可以去圈养它驯养它。但是不要假装它不存在，排斥它。我们每个人都应该自由的，骄傲的活出个生机勃勃的生命。”</view>
-              <view class="author">-- 存己004号</view>  
+              <view class="page__bd_title">“ 每个人的心中都有一匹欲望的野马。你可以去放养它，也可以去圈养它驯养它。但是不要假装它不存在，排斥它。我们每个人都应该自由的，骄傲的活出个生机勃勃的生命。”</view>
+
         </view>
       </view>
     </scroll-view>
     <!-- 滚动之后出现在底部的内容 -->
     <view class="section_caption" style='opacity:{{opacity}};' animation="{{animationData2}}">
-      <view class="section_caption_title">坤宏睿博BIM</view>
-      <view class="section_caption_bd">翻滚的烟雾，倾盆的大雨，还有风中起伏的麦田。
-      有了最多 18 个核心和超线程技术，iMac Pro 让你能轻松构建和渲染各种静态或
-      动态的 2D 或 3D 粒子系统。</view>
+      <view class="page__title">温州隆亨乳胶制品</view>
     </view>
   </view>
 </view>
 
 
-
-
-
-
-
-
-<!-- 
---
---  复制区域
---
- -->
-
-
-  <!--  修改二代码 -->
-<!-- 第三页 -->
+<!-- 第四页 -->
 <view class="main">
  
   <view class="section-content section-content_two">
@@ -169,9 +133,12 @@
     <view class="page__hd">
       <view class="page__title">心灵感知</view>
       <view class="section-content ">
-          <view class="page__bd page__bd_spacing">
-              <view class="weui-form-preview__value">“要自由的人，其实要承担最大的责任，选别人少走的路的人，背负最沉重的枷锁。从来就没有不需要抵抗重力的飞翔。要自由的人，其实要承担最大的责任，选别人少走的路的人，背负最沉重的枷锁。从来就没有不需要抵抗重力的飞翔”</view>
-              <view class="author">-- 存己001号</view>  
+          <view class="page__bd">
+              <view class="page__bd_title">“要自由的人，其实要承担最大的责任，选别
+              人少走的路的人，背负最沉重的枷锁。从来就没有不需要抵抗重力的飞翔。要自由的人，其实
+              要承担最大的责任，选别人少走的路的人，背负最沉重的枷锁。从来就没有不需要抵抗重力
+              飞翔”</view>
+              <view class="author page__bd_title">-- 存己001号</view>  
           </view>
       </view>
     </view>
@@ -184,65 +151,70 @@
       <!-- 文字内容 -->
       <view class="scrollText" style='min-height:320px;'>
         <view class="page__bd page__bd_spacing">
-              <view class="weui-form-preview__value">“第一等智慧的人都是自相矛盾的，两个原则没有任何一个是对的，只有在具体的时间和地点，做出的唯一正好的判断，才是对的。中庸，是恰到好处”</view>
-              <view class="author">-- 存己003号</view>  
+              <view class="page__bd_title">“第一等智慧的人都是自相矛盾的，两个原则
+              没有任何一个是对的，只有在具体的时间和地点，做出的唯一正好的判断，才是对的。中庸
+              ，是恰到好处”</view>
+              <view class="author page__bd_title">-- 存己003号</view>  
         </view>
-        <view class="page__bd page__bd_spacing">
-              <view class="weui-form-preview__value">“ 每个人的心中都有一匹欲望的野马。你可以去放养它，也可以去圈养它驯养它。但是不要假装它不存在，排斥它。我们每个人都应该自由的，骄傲的活出个生机勃勃的生命。”</view>
-              <view class="author">-- 存己004号</view>  
-        </view>
+
       </view>
-      
-
     </scroll-view>
-
-    <!-- 文字层滚动后的图片 -->
-    <view class="scrollback">
-      <image src='../dist/images/back.jpg'></image>
-    </view>
-    <!-- 滚动之后出现在底部的内容 -->
-    <view class="section_caption" style='opacity:{{opacity}};' animation="{{animationData2}}">
-      <view class="section_caption_title">粒子模式？小意思。</view>
-      <view class="section_caption_bd">翻滚的烟雾，倾盆的大雨，还有风中起伏的麦田。
-      有了最多 18 个核心和超线程技术，iMac Pro 让你能轻松构建和渲染各种静态或
-      动态的 2D 或 3D 粒子系统。</view>
-    </view>
   </view>
 </view>
 
 
+  <!-- 第五页  -->
+  <view class="main">
+      <view class="page__hd">
+          <view class="page__title">有趣的事实</view>
+          <view class="page__bd_title">The happiest people are not those who have the 
+          best of everything, but who make the best out of everything. </view>
+      </view>
+      <view class="page__bd page__bd_spacing">
+          <view class="weui-progress">
+              <view class="weui-progress__bar">
+                  <progress percent="100" stroke-width="20" active='true'/>
+              </view>
+          </view>
+          <view class="weui-progress__desc">服务客户 <text>50+</text></view>
+          <view class="weui-progress">
+              <view class="weui-progress__bar">
+                  <progress percent="100" stroke-width="20" active='true'/>
+              </view>
+          </view>
+          <view class="weui-progress__desc">完成项目 <text>50+</text></view>
+          <view class="weui-progress">
+              <view class="weui-progress__bar">
+                  <progress percent="100" stroke-width="20" active='true'/>
+              </view>
+          </view>
+          <view class="weui-progress__desc">开发时间 <text>26280H+</text></view>
+          <view class="weui-progress">
+              <view class="weui-progress__bar">
+                  <progress percent="100" stroke-width="20" active='true'/>
+              </view>
+          </view>
+          <view class="weui-progress__desc" >成立时间 <text>8760H+</text></view>
+      </view>
+  </view>
 
-<!-- 第四页  -->
 
-<view class="page__hd">
-        <view class="page__title">有趣的事实</view>
-        <view class="page__bd_title">The happiest people are not those who have the 
-        best of everything, but who make the best out of everything. </view>
-    </view>
-    <view class="page__bd page__bd_spacing">
-        <view class="weui-progress">
-            <view class="weui-progress__bar">
-                <progress percent="100" stroke-width="20" active='true'/>
-            </view>
-        </view>
-        <view class="weui-progress__desc">服务客户 <text>50+</text></view>
-        <view class="weui-progress">
-            <view class="weui-progress__bar">
-                <progress percent="100" stroke-width="20" active='true'/>
-            </view>
-        </view>
-        <view class="weui-progress__desc">完成项目 <text>50+</text></view>
-        <view class="weui-progress">
-            <view class="weui-progress__bar">
-                <progress percent="100" stroke-width="20" active='true'/>
-            </view>
-        </view>
-        <view class="weui-progress__desc">开发时间 <text>26280H+</text></view>
-        <view class="weui-progress">
-            <view class="weui-progress__bar">
-                <progress percent="100" stroke-width="20" active='true'/>
-            </view>
-        </view>
-        <view class="weui-progress__desc">成立时间 <text>8760H+</text></view>
-    </view>
+  <!-- 底部内容 -->
+  <view class="weui-footer">
+      <view class="page__hd">
+          <view class="page__title">开启你的项目</view>
+          <view class="page__bd_title">Everybody wants happiness. No one wants pain.
+           But how can you make a rainbow without a little rain? </view>
+          <view class="page__bd_title">
+            <button class="weui-btn" type="warn" bindtap='CallMe'>联系我们</button>
+          </view>
+      </view>
+      <view class="page__bd_title">anonymity</view>
+      <view class="page__bd_desc">It is our choices that show what we truly are,
+       far more than our abilities.</view>
+      <view class="page__bd_desc">© 2017-2027 getcunji.com All Rights
+       Reserved.</view>
+  </view>
+  
 </view>
+

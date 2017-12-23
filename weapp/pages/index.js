@@ -16,7 +16,6 @@ function _next() {
 }
 
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -35,6 +34,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+  
     if (this.data.disabled) return;
 
     this.setData({
@@ -76,13 +77,6 @@ Page({
     })
 
     this.animation = animation
-
-    animation.scale(1.1, 1.1).step(),
-
-      this.setData({
-      animationData: animation.export()
-    })
-
     setTimeout(function () {
       animation.translateY(60).step()
       this.setData({
@@ -289,9 +283,6 @@ Page({
   scrollUpper: function (event){
     console.log(event.detail)
     if (event.detail.direction == 'top') {
-      // this.setData({
-      //   display: 'none'
-      // })
       //显示和隐藏过度动画
         var animation = wx.createAnimation({
           transformOrigin: "50% 50%",
@@ -323,21 +314,12 @@ Page({
       })
     }
   },
-
-// 第三页 滚动动画  ---暂时无用
-  bindscrollTwo:function(event){
-    console.log(event.detail)
-    if(event.detail.scrollTop == 100){
-      //滚动到顶部时,
-      this.setData({
-        viewStyle: 'scrollImg_pos',
-      })
-    }else{
-      this.setData({
-        viewStyle: '',
-      })
-    }
+  // 联系我们
+  CallMe:function(event){
+    
+    wx.makePhoneCall({
+      phoneNumber: '15730179295' //
+    })
   }
-  
 
 })

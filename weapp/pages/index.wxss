@@ -7,8 +7,7 @@
 }
 .main{
   position: relative;
-  min-height: 504px;
-
+  margin-bottom: 50px;
 }
 .sticky-wrapper{
   width: 100%;
@@ -16,7 +15,9 @@
 .sticky-wrapper image{
   width: 100%;
 }
-
+.sec_content_bd{
+  padding:20px 0; 
+}
 .section-content{
   position: relative;
   width: 100%;
@@ -122,5 +123,12 @@
 }
 .weui-progress__desc{
   color: #fff;
-  line-height: 40px;
+  line-height: 50px;
+  font-size: 20px;
 }
+.page__bd_desc {
+  font-size: 14px;
+  line-height: 2;
+  padding: 15px;
+}
+
