@@ -23,7 +23,7 @@
       </view>
   </view>
 
-    <!-- 第二页 -->
+    <!-- 第二页 0.0.0.0.0-->
 <view class="main">
   <scroll-view scroll-y="true" style="height:{{height}}px" bindscroll="bindscroll" scroll-with-animation="true" upper-threshold="10" lower-threshold="10" enable-back-to-top="true">
     <!-- 文字层 -->
