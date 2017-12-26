@@ -1,47 +1,75 @@
 // pages/index.js
-function _next() {
-  var that = this;
-  if (this.data.progress >= 100) {
-    this.setData({
-      disabled: false
-    });
-    return true;
-  }
-  this.setData({
-    progress: ++this.data.progress
-  });
-  setTimeout(function () {
-    _next.call(that);
-  }, 20);
-}
-
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    animationData: {},
     height:0,
     width:0,
-    num:0.99,
-    opacity:'',
+    num:0.33,
+    num1: 0.33,
+    num2: 0.33,
+    num3: 0.33,
     animationData2:{},
     scrollY:true,
     viewStyle:'',
+    active:false,
+    autoplay:false,
+    majList:[
+      {
+        'pic':'../dist/images/icon_1.png',
+        'title':'网站建设'
+      },
+      {
+        'pic': '../dist/images/icon_2.png',
+        'title': '微信公众号'
+      },
+      {
+        'pic':'../dist/images/icon_3.png',
+        'title':'微信小程序'
+      },
+      {
+        'pic':'../dist/images/icon_4.png',
+        'title':'H5页面'
+      },
+      {
+        'pic': '../dist/images/icon_5.png',
+        'title': 'APP/WebAPP'
+      },
+      {
+        'pic': '../dist/images/icon_6.png',
+        'title': '产品/UI设计'
+      },
+    ],
+    hotList:[
+      {
+        'pic':'../dist/images/1.png',
+        'title':'车源宝'
+      },
+      {
+        'pic': '../dist/images/2.png',
+        'title': '购物商城'
+      },
+      {
+        'pic': '../dist/images/3.png',
+        'title': '我的音乐'
+      },
+      {
+        'pic': '../dist/images/4.png',
+        'title': '会议精灵'
+      },
+      {
+        'pic': '../dist/images/5.png',
+        'title': '头条新闻'
+      },
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {  
-    if (this.data.disabled) return;
 
-    this.setData({
-      progress: 0,
-      disabled: true
-    });
-    _next.call(this);
-  
   },
 
   /**
@@ -70,7 +98,7 @@ Page({
    */
   onShow: function () {
     var animation = wx.createAnimation({
-      duration: 1000,
+      duration: 3000,
       timingFunction: 'ease',
     })
 
@@ -81,9 +109,9 @@ Page({
         animationData: animation.export()
       })
     }.bind(this), 1000)
+
   },
 
-  
   /**
    * 生命周期函数--监听页面隐藏
    */
@@ -236,9 +264,6 @@ Page({
       console.log(res.errCode)
     })
   },
-
-
-
   scrolltoupper: function(e) {
     
   },
@@ -277,47 +302,60 @@ Page({
 
   },
   
-  // 滚动到顶部触发的事件
-  scrollUpper: function (event){
-    console.log(event.detail)
-    if (event.detail.direction == 'top') {
-      //显示和隐藏过度动画
-        var animation = wx.createAnimation({
-          transformOrigin: "50% 50%",
-          duration: 300,
-          timingFunction: 'ease-in',
-          delay:0
-        });
-        animation.opacity(0).step();
-        this.setData({
-          animationData2: animation.export(),
-        })
-    }
-
-  },
-  //滚动到底部触发的事件
-  scrollLower: function (event){
-    console.log(event.detail.direction)
-    if (event.detail.direction == 'bottom')
-    {
-      var animation = wx.createAnimation({
-        transformOrigin: "50% 50%",
-        duration: 300,
-        timingFunction: 'ease-in',
-        delay: 0
-      });
-      animation.opacity(1).step();
-      this.setData({
-        animationData2: animation.export(),
-      })
-    }
-  },
   // 联系我们
   CallMe:function(event){
-    
     wx.makePhoneCall({
       phoneNumber: '15730179295' //
     })
-  }
+  },
+  //触摸区域时，文字变亮
+  touchStartCodeTwo:function(e){
+    console.log(e)
+    if (e.type == "touchstart"){
+      // 延迟动画时间
+      setTimeout(function () {
+        this.setData({
+          num: ".99"
+        })
+      }.bind(this), 200)
+      
+    }
+  },
+  bindTouchStartScond: function (e) {
+    if (e.type == "touchstart") {
+      // 延迟动画时间
+      setTimeout(function () {
+        this.setData({
+          num1: ".99"
+        })
+      }.bind(this), 200)
 
+    }
+  },
+  touchStartCodeActive: function (e) {
+    if (e.type == "touchstart") {
+      // 延迟动画时间
+      setTimeout(function () {
+        this.setData({
+          num2: ".99",
+          active:'true'
+        })
+      }.bind(this), 200)
+
+    }
+  },
+  touchStartCodefour: function (e) {
+    if (e.type == "touchstart") {
+      // 延迟动画时间
+      setTimeout(function () {
+        this.setData({
+          num3: ".99",
+        })
+      }.bind(this), 200)
+    }
+  },
+  //客服会话
+  CallMeWX:function(event){
+    console.log(event);
+  }
 })
