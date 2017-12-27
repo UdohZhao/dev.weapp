@@ -58,7 +58,7 @@
         </view>
       </scroll-view> -->
       <!--横向滚动 轮播图  -->
-  <swiper indicator-dots autoplay="{{autoplay}}" duration="1000" class="recommend_scroll_x_box swiper-box">
+  <swiper indicator-dots  autoplay="{{autoplay}}" duration="1000" class="recommend_scroll_x_box swiper-box">
   <block wx:for="{{hotList}}" class="recommend_hot_box">
     <swiper-item >
       <view class="recommend_hot_box_title">{{item.title}}</view>
@@ -140,7 +140,7 @@
             day in and day out.  </view>
         </view>
         <view class="page__bd page__bd_spacing">
-            <view class="page__bd_title">重庆存己科技</view>
+            <view class="page__title">重庆存己科技</view>
             <view class="page__bd_desc"> 重庆存己科技有限公司成立于2017年，注册资金50万，是一家
             综合性的高新技术开发企业，公司一直以“品质保证、服务专业、顾客满意”为经营宗旨。主要服务
             企业的网站建设、制作设计、微信开发、 APP等应用开发。希望通过我们的专业水平和不懈努力
@@ -175,7 +175,7 @@
               
             </view>
             <view class='page__bd_title' >
-                <button class="weui-btn"  open-type='contact' session-from="weapp" bindtap='CallMeWX'>客服消息</button>
+                <button class="weui-btn"  open-type='contact' session-from="weapp">客服消息</button>
             </view>
         </view>
         <view class="page__bd_title">anonymity</view>

@@ -14,7 +14,7 @@ Page({
     scrollY:true,
     viewStyle:'',
     active:false,
-    autoplay:false,
+    autoplay:true,
     majList:[
       {
         'pic':'../dist/images/icon_1.png',
