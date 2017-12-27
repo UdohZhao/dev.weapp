@@ -44,23 +44,23 @@ Page({
     hotList:[
       {
         'pic':'../dist/images/1.png',
-        'title':'车源宝'
+        'title':'延时光影'
       },
       {
         'pic': '../dist/images/2.png',
-        'title': '购物商城'
+        'title': '一订追踪助手'
       },
       {
         'pic': '../dist/images/3.png',
-        'title': '我的音乐'
+        'title': '1分钟简笔画'
       },
       {
         'pic': '../dist/images/4.png',
-        'title': '会议精灵'
+        'title': '爱丽社iLux'
       },
       {
         'pic': '../dist/images/5.png',
-        'title': '头条新闻'
+        'title': '觅己证件照'
       },
     ]
   },
