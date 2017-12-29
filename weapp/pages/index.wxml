@@ -17,7 +17,7 @@
           <view class="page__bd page__bd_spacing">
             <view class="button-sp-area">
               <view class="page__title">Never Stop Exploring.</view>
-              <view class="page__title">永 远 不 要</view>
+              <view class="page__title">永 远 不 要,</view>
               <view class="page__title">停 止 探 索</view>
             </view>
           </view>
@@ -175,7 +175,7 @@
               
             </view>
             <view class='page__bd_title' >
-                <button class="weui-btn"  open-type='contact' session-from="weapp">客服消息</button>
+                <button class="weui-btn" type="primary"  open-type='contact' session-from="weapp">进入客服会话</button>
             </view>
         </view>
         <view class="page__bd_title">anonymity</view>
