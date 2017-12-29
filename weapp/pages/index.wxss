@@ -78,6 +78,7 @@
   font-size: 30px;
   text-align: center;
   padding:15px; 
+  color: #fff;
 }
 .recommend_hot_image {
   width: 100%;
@@ -99,7 +100,7 @@
 .swiper-box .wx-swiper-dot-active::before{
     background-color: #f00;  
 }
-
+progress {color: #fff;}
 
 
 
@@ -142,6 +143,7 @@
 /* 第三页样式修改  开始  */
 .section-content_two{
   min-height: 600px;
+  margin-top: 40px;
 }
 .scrollImg{
   margin-top: 80px;
@@ -155,6 +157,7 @@
   left: 0;
   z-index: -1;
 }
+.fs25{font-size: 25px;}
 
 /* 第三页样式修改  结束  */
 
@@ -208,4 +211,7 @@ contact-button{
 }
 .backFFF{
   background-color: #fff;
+}
+.textalignCen{
+  text-align: center;
 }

@@ -39,24 +39,10 @@
   </view>
   <!-- 第三页 -->
   <view class="main">
-    <view class="section-content section-content_two" >
-      <!--上半部分固定文字内容  -->
-      <view style="opacity:{{num}}" class="section_body_img" bindtouchstart="touchStartCodeTwo" >
-        <view class="page__title">最近项目</view>
-        <view class="section-content ">
-            <view class="page__bd">
-                <view class="page__bd_title">What's coming will come and we'll just have
-                 to meet it when it does.</view>
-            </view>
-        </view>
-      </view>
-      <!-- 横向滚动图图片 -->
-      <!-- <scroll-view class="recommend_scroll_x_box" scroll-x="true">
-        <view class="recommend_hot_box" wx:for="{{hotList}}" wx:key="k" style='width:{{width}}px'>
-          <view class="recommend_hot_box_title">{{item.title}}</view>
-          <image src="{{item.pic}}" class="recommend_hot_image"></image>
-        </view>
-      </scroll-view> -->
+    <view class=" section-content_two" style="opacity:{{num}}" bindtouchstart="touchStartCodeTwo">
+      <view class="section__title">最近项目</view>
+            <view class="page__bd_title">What's coming will come and we'll just have
+            to meet it when it does.</view>
       <!--横向滚动 轮播图  -->
   <swiper indicator-dots  autoplay="{{autoplay}}" duration="1000" class="recommend_scroll_x_box swiper-box">
   <block wx:for="{{hotList}}" class="recommend_hot_box">
@@ -71,76 +57,91 @@
 
 
   <!-- 第四页 -->
-  <view class="main">
-  
-    <view class="section-content section-content_two"  bindtouchstart='bindTouchStartScond' style='opacity:{{num1}}'>
-      <!--上半部分固定文字内容  -->
-      <view class="page__hd">
-        <view class="page__title">心灵感知</view>
-        <view class="section-content ">
-            <view class="page__bd">
-                <view class="page__bd_title">The only way to keep the dream alive is 
-                to never try to implement it.</view>
-            </view>
-            <view class="page__bd">
-                <view class="page__bd_title">“第一等智慧的人都是自相矛盾的，两个原则
-                没有任何一个是对的，只有在具体的时间和地点，做出的唯一正好的判断，才是对的。中庸
-                ，是恰到好处”</view>
-          </view>
-          <view class="page__bd">
-                <view class="page__bd_title">“要自由的人，其实要承担最大的责任，选别人少走
-                的路的人，背负最沉重的枷锁。从来就没有不需要抵抗重力的飞翔。”</view>
-          </view>
-        </view>
-      </view>
-    </view>
-  </view>
-
-
-    <!-- 第五页  -->
-    <view class="main" bi>
+   <view class="main" bi>
         <view class="page__hd" bindtouchstart='touchStartCodeActive' style='opacity:{{num2}}'>
             <view class="page__title">有趣的事实</view>
             <view class="page__bd_title">We live only to discover beauty. All else is 
             a form of waiting. </view>
         </view>
-        <view  class="page__bd page__bd_spacing" touchmove ="touchendName" >
+        <view  class="page__bd page__bd_spacing"  >
             <view class="weui-progress">
                 <view class="weui-progress__bar">
                     <progress percent="100" stroke-width="20" active='{{active}}'/>
                 </view>
             </view>
-            <view class="weui-progress__desc">服务客户 <text>50+</text></view>
+            <view class="weui-progress__desc" >服务客户 <text>{{num11}}</text>+</view>
             <view class="weui-progress">
                 <view class="weui-progress__bar">
                     <progress percent="100" stroke-width="20" active='{{active}}'/>
                 </view>
             </view>
-            <view class="weui-progress__desc">完成项目 <text>50+</text></view>
+            <view class="weui-progress__desc">完成项目 <text>{{num22}}</text>+</view>
             <view class="weui-progress">
                 <view class="weui-progress__bar">
                     <progress percent="100" stroke-width="20" active='{{active}}'/>
                 </view>
             </view>
-            <view class="weui-progress__desc">开发时间 <text>26280H+</text></view>
+            <view class="weui-progress__desc">开发时间 <text data->{{num33}}</text>H+</view>
             <view class="weui-progress">
                 <view class="weui-progress__bar">
                     <progress percent="100" stroke-width="20" active='{{active}}'/>
                 </view>
             </view>
-            <view class="weui-progress__desc" >成立时间 <text>8760H+</text></view>
+            <view class="weui-progress__desc" >成立时间 <text>{{num44}}</text>H+</view>
         </view>
     </view>
+  <view class="main">
 
+    <!-- 第五页  -->
+    <view class="weui-footer">
+        <view class="page__hd">
+            <view class="page__title">开启你的项目</view>
+            <view class="page__bd_title">It is better to destroy one’s own errors
+             than those of others.</view>
+            <view class="page__bd_title">
+              <button class="weui-btn" type="warn" bindtap='CallMe'>电话咨询</button>
+              
+            </view>
+            <view class='page__bd_title' >
+                <button class="weui-btn"  open-type='contact' session-from="weapp">客服消息</button>
+            </view>
+        </view>
+    </view>
   <!-- 第六页  -->
+    <view class="section-content section-content_two"  bindtouchstart='bindTouchStartScond' style='opacity:{{num1}}'>
+        <!--上半部分固定文字内容  -->
+        <view class="page__hd">
+          <view class="page__title">心灵感知</view>
+          <view class="section-content ">
+              <view class="page__bd">
+                  <view class="page__bd_title">The only way to keep the dream alive is 
+                  to never try to implement it.</view>
+              </view>
+              <view class="page__bd">
+                  <view class="page__bd_title">“第一等智慧的人都是自相矛盾的，两个原
+                  则
+                  没有任何一个是对的，只有在具体的时间和地点，做出的唯一正好的判断，才是对的
+                  。中庸
+                  ，是恰到好处”</view>
+            </view>
+            <view class="page__bd">
+                  <view class="page__bd_title">“要自由的人，其实要承担最大的责任，选别人少走
+                  的路的人，背负最沉重的枷锁。从来就没有不需要抵抗重力的飞翔。”</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 底部内容 -->
     <view class="main" bindtouchstart='touchStartCodefour' style='opacity:{{num3}}'>
         <view class="page__hd">
-            <view class="page__title">我们的历史</view>
+            <view class="page__title ">我们的历史</view>
             <view class="page__bd_title">Success is the sum of small efforts, repeated
             day in and day out.  </view>
         </view>
         <view class="page__bd page__bd_spacing">
-            <view class="page__title">重庆存己科技</view>
+            <view class="page__title fs25">重庆存己科技</view>
             <view class="page__bd_desc"> 重庆存己科技有限公司成立于2017年，注册资金50万，是一家
             综合性的高新技术开发企业，公司一直以“品质保证、服务专业、顾客满意”为经营宗旨。主要服务
             企业的网站建设、制作设计、微信开发、 APP等应用开发。希望通过我们的专业水平和不懈努力
@@ -163,25 +164,11 @@
             </view>
         </view>
     </view>
-
-    <!-- 底部内容 -->
-    <view class="weui-footer">
-        <view class="page__hd">
-            <view class="page__title">开启你的项目</view>
-            <view class="page__bd_title">It is better to destroy one’s own errors
-             than those of others.</view>
-            <view class="page__bd_title">
-              <button class="weui-btn" type="warn" bindtap='CallMe'>电话咨询</button>
-              
-            </view>
-            <view class='page__bd_title' >
-                <button class="weui-btn"  open-type='contact' session-from="weapp">客服消息</button>
-            </view>
-        </view>
-        <view class="page__bd_title">anonymity</view>
-        <view class="page__bd_desc">It is our choices that show what we truly are,
+    <view class="main">
+      <view class="page__bd_title">anonymity</view>
+        <view class="page__bd_desc textalignCen">It is our choices that show what we truly are,
         far more than our abilities.</view>
-        <view class="page__bd_desc">© 2017-2027 getcunji.com All Rights
+        <view class="page__bd_desc textalignCen">© 2017-2027 getcunji.com All Rights
         Reserved.</view>
     </view>
 </scroll-view> 

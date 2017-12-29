@@ -30,9 +30,9 @@
     "example/searchbar/searchbar"
   ],
   "window": {
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "navigationBarTitleText": "程序智库",
-    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarBackgroundColor": "#000",
     "backgroundColor": "#f8f8f8"
   },
   "networkTimeout": {

@@ -1,4 +1,6 @@
 // pages/index.js
+
+import NumberAnimate from "../dist/utils/NumberAnimate";
 Page({
   /**
    * 页面的初始数据
@@ -43,24 +45,24 @@ Page({
     ],
     hotList:[
       {
-        'pic':'../dist/images/1.png',
-        'title':'延时光影'
+        'pic':'../dist/images/1.jpg',
+        'title':'风格美发店'
       },
       {
-        'pic': '../dist/images/2.png',
-        'title': '一订追踪助手'
+        'pic': '../dist/images/2.jpg',
+        'title': '可可蜜语蛋糕坊'
       },
       {
-        'pic': '../dist/images/3.png',
-        'title': '1分钟简笔画'
+        'pic': '../dist/images/3.jpg',
+        'title': '美宅客装修设计'
       },
       {
-        'pic': '../dist/images/4.png',
-        'title': '爱丽社iLux'
+        'pic': '../dist/images/4.jpg',
+        'title': '小木屋图书'
       },
       {
-        'pic': '../dist/images/5.png',
-        'title': '觅己证件照'
+        'pic': '../dist/images/5.jpg',
+        'title': '雅楠家的花儿'
       },
     ]
   },
@@ -98,13 +100,13 @@ Page({
    */
   onShow: function () {
     var animation = wx.createAnimation({
-      duration: 3000,
+      duration: 800,
       timingFunction: 'ease',
     })
 
     this.animation = animation
     setTimeout(function () {
-      animation.translateY(60).step()
+      animation.translateY(80).step()
       this.setData({
         animationData: animation.export()
       })
@@ -332,18 +334,76 @@ Page({
 
     }
   },
+
+
+
   touchStartCodeActive: function (e) {
+    
     if (e.type == "touchstart") {
-      // 延迟动画时间
-      setTimeout(function () {
         this.setData({
           num2: ".99",
           active:'true'
-        })
-      }.bind(this), 200)
+        }),
+        this.setData({
+          num11: '',
+          num22: '',
+          num33: '',
+          num44: ''
+        });
+      let num11 = 50;
+      let n1 = new NumberAnimate({
+        from: num11,
+        speed: 3000,
+        refreshTime: 100,
+        decimals: 2,
+        onUpdate: () => {
+          this.setData({
+            num11: n1.tempValue
+          });
+        },
+      });
 
+      let num22 = 50;
+      let n2 = new NumberAnimate({
+        from: num22,
+        speed: 3000,
+        decimals: 2,
+        refreshTime: 100,
+        onUpdate: () => {
+          this.setData({
+            num22: n2.tempValue
+          });
+        },
+      });
+
+      let num33 = 26280;
+      let n3 = new NumberAnimate({
+        from: num33,
+        speed: 3000,
+        refreshTime: 100,
+        decimals: 2,
+        onUpdate: () => {
+          this.setData({
+            num33: n3.tempValue
+          });
+        },
+      });
+      let num44 = 8760;
+      let n4 = new NumberAnimate({
+        from: num44,
+        speed: 3000,
+        refreshTime: 100,
+        decimals: 2,
+        onUpdate: () => {
+          this.setData({
+            num44: n4.tempValue
+          });
+        },
+      });
     }
   },
+
+
   touchStartCodefour: function (e) {
     if (e.type == "touchstart") {
       // 延迟动画时间
