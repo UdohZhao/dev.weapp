@@ -307,7 +307,7 @@ Page({
   // 联系我们
   CallMe:function(event){
     wx.makePhoneCall({
-      phoneNumber: '15730179295' //
+      phoneNumber: '18423031898' //
     })
   },
   //触摸区域时，文字变亮
